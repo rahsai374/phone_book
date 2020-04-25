@@ -1,0 +1,11 @@
+.idea/*
+media/
+**/__pycache__/*
+*.pyc
+.env
+venv/*
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
