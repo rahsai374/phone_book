@@ -29,7 +29,6 @@ if env('DJANGO_ENV') and env('DJANGO_ENV') == "dev":
     DEBUG = True
 
 DJANGO_ENV = env('DJANGO_ENV')
-ADMIN_ENABLED = env('ADMIN_ENABLED')
 
 
 # Quick-start development settings - unsuitable for production

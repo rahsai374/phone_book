@@ -31,8 +31,5 @@ urlpatterns = [
     path('api/v1/', include((v1_router.urls, "v1"))),
     path('health/', include('health_check.urls')),
     path('admin/', admin.site.urls),
-    path('api-token-auth/', obtain_jwt_token),
-    path('api-token-refresh/', refresh_jwt_token),
-    path('api-token-verify/', verify_jwt_token),
 ]
 

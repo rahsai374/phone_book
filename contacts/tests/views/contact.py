@@ -23,7 +23,7 @@ class ContactApiTest(TestCase):  # Test the ContactApiTest api
         self.contact_casper = Contact.objects.create(
             name='Casper', email='abcd@email.com', phone_number='1234567890', user_id=self.user.id)
         self.contact_muffine = Contact.objects.create(
-            name='Muffin', email='abcd@email.com', phone_number='1234567890', user_id=self.user.id)
+            name='Muffin', email='abcdp@email.com', phone_number='1234567890', user_id=self.user.id)
 
 
     def test_retrieve_contacts_list(self):  # Test retrieving a list of contacts
@@ -45,7 +45,7 @@ class ContactApiTest(TestCase):  # Test the ContactApiTest api
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
     def test_create_contact(self):  # Test creation of  contact
-        request = factory.post('api/v1/contacts/', {'name': 'casper_test', 'email':'abcd@email.com',
+        request = factory.post('api/v1/contacts/', {'name': 'casper_test', 'email':'abc1d@email.com',
                                                     'phone_number':'1234567890', 'user_id': self.user.id},
                                format='json')
         force_authenticate(request, user=self.user)
