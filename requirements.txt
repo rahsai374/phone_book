@@ -6,6 +6,7 @@ botocore==1.15.39
 cachetools==4.0.0
 certifi==2019.11.28
 chardet==3.0.4
+coverage==5.1
 defusedxml==0.6.0
 diff-match-patch==20181111
 Django==3.0.3
@@ -26,6 +27,7 @@ django-silk==4.0.0
 django-storages==1.9.1
 django-tinymce==2.8.0
 djangorestframework==3.11.0
+djangorestframework-jwt==1.11.0
 docutils==0.15.2
 environ==1.0
 et-xmlfile==1.0.1
@@ -43,11 +45,13 @@ Jinja2==2.11.1
 jmespath==0.9.5
 MarkupPy==1.14
 MarkupSafe==1.1.1
+mysqlclient==1.4.6
 odfpy==1.4.1
 openpyxl==3.0.3
 phonenumbers==8.12.2
 Pillow==7.1.1
 protobuf==3.11.3
+psycopg2-binary==2.8.5
 py-moneyed==0.8.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
