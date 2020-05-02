@@ -15,8 +15,10 @@ class ContactTest(TestCase):
             name='Muffin', email='abcdp@email.com', phone_number='1234567890', user_id=user.id)
 
     def test_contact_creation(self):
-        contact_casper = Contact.objects.get(name='Casper')
-        contact_muffin = Contact.objects.get(name='Muffin')
-        self.assertEqual(contact_casper.name, "Casper")
-        self.assertEqual(contact_muffin.name, "Muffin")
+        user = User.objects.get(username='test3')
+        contact_test = Contact(name='Muffin_test', email='Muffin_test@email.com', phone_number='1234567890', user_id=user.id)
+        self.assertEqual(contact_test.name, "Muffin_test")
+        self.assertEqual(contact_test.email, "Muffin_test@email.com")
+        self.assertEqual(contact_test.user_id, user.id)
+
 

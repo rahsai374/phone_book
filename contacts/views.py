@@ -1,10 +1,25 @@
-from rest_framework import viewsets
-from .serializers import ContactSerializer
+from rest_framework import viewsets, mixins
+from .serializers import ContactSerializer, UserSerializer
 from .models import Contact
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
+from django.contrib.auth.models import User
 
+class UserViewSet(mixins.CreateModelMixin,
+                  mixins.RetrieveModelMixin,
+                  viewsets.GenericViewSet):
+    permission_classes = (AllowAny,)
+    serializer_class = UserSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        return User.objects.filter(id=self.request.user.id)
+
+    # def perform_create(self, serializer):
+    #     username = self.request.POST.get('usernmae', None)
+    #     password = self.request.POST.get('password', None)
+    #     serializer.save(username=username, password=password)
 
 class ContactsViewset(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)

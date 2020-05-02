@@ -25,7 +25,9 @@ admin.site.site_title = "Plivo test Admin Portal"
 admin.site.index_title = "Welcome to Plivo test Admin Portal"
 
 v1_router = DefaultRouter()
+v1_router.register('users', contact_views.UserViewSet, basename="users")
 v1_router.register('contacts', contact_views.ContactsViewset, basename="contacts")
+
 
 urlpatterns = [
     path('api/v1/', include((v1_router.urls, "v1"))),
