@@ -26,7 +26,7 @@ django-phonenumber-field==4.0.0
 django-silk==4.0.0
 django-storages==1.9.1
 django-tinymce==2.8.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 docutils==0.15.2
 environ==1.0
