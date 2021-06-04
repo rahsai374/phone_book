@@ -9,7 +9,7 @@ chardet==3.0.4
 coverage==5.1
 defusedxml==0.6.0
 diff-match-patch==20181111
-Django==3.0.3
+Django==3.1.9
 django-admin-list-filter-dropdown==1.0.3
 django-admin-rangefilter==0.5.4
 django-choices==1.7.1
