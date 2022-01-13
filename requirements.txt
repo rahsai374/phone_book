@@ -49,7 +49,7 @@ mysqlclient==1.4.6
 odfpy==1.4.1
 openpyxl==3.0.3
 phonenumbers==8.12.2
-Pillow==7.1.1
+Pillow==9.0.0
 protobuf==3.11.3
 psycopg2-binary==2.8.5
 py-moneyed==0.8.0
